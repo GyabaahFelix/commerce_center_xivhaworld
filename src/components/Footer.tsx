@@ -9,7 +9,10 @@ const Footer = () => {
         {/* LEFT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <Link href="/">
-            <div className="text-2xl tracking-wide">FELIX BEST</div>
+          <div className="text-5xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
+  FELIX BEST
+</div>
+
           </Link>
           <p>
             P.O Box LG 25, <br />
@@ -132,7 +135,7 @@ const Footer = () => {
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
         <div className="">
-          © 2024 felixbest dev. <br /> All rights reserved
+          © 2024 felixbest.dev <br /> All rights reserved
         </div>
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="">

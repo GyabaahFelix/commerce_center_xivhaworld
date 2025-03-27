@@ -24,10 +24,11 @@ export const useCartStore = create<CartState>((set) => ({
     try {
       const cart = await wixClient.currentCart.getCurrentCart();
       set({
-        cart: cart || [],
+        cart: cart ?? { lineItems: [] }, // Ensures `cart` is always a valid object
         isLoading: false,
         counter: cart?.lineItems.length || 0,
       });
+      
     } catch (err) {
       set((prev) => ({ ...prev, isLoading: false }));
     }

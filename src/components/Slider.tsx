@@ -7,25 +7,25 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Summer Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Welcome to UNIMALL👋🏾",
+    description: "Your One-Stop Shopping Destination!",
+    img: "/official.jpg",
     url: "/",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
     id: 2,
-    title: "Winter Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Discover Awesome Deals🎉",
+    description: "Shop Smart, Shop Easy, Shop Everything!",
+    img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=2900",
     url: "/",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
   },
   {
     id: 3,
-    title: "Spring Sale Collections",
-    description: "Sale! Up to 50% off!",
-    img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Big Savings Await You🫵🏾",
+    description: "Exclusive Deals & Discounts – Shop Now and Save Big!",
+    img: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=2900",
     url: "/",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
@@ -37,10 +37,10 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []); // Empty dependency array to run only once
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="h-[calc(100vh-80px)] overflow-hidden relative">
@@ -50,19 +50,19 @@ const Slider = () => {
       >
         {slides.map((slide) => (
           <div
-            className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}
+            className={`${slide.bg} w-screen h-full flex flex-col gap-10 xl:flex-row`}
             key={slide.id}
           >
             {/* TEXT CONTAINER */}
-            <div className="h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center">
-              <h2 className="text-xl lg:text-3xl 2xl:text-5xl">
-                {slide.description}
-              </h2>
-              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">
+            <div className="h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-6 2xl:gap-8 text-center">
+              <h1 className="text-3xl lg:text-4xl 2xl:text-6xl font-semibold">
                 {slide.title}
               </h1>
-              <Link href={slide.url}>
-                <button className="rounded-md bg-black text-white py-3 px-4">
+              <h2 className="text-lg lg:text-xl 2xl:text-2xl text-gray-700">
+                {slide.description}
+              </h2>
+              <Link href="/list">
+                <button className="rounded-md bg-black text-white py-2 px-4 text-sm lg:text-base">
                   SHOP NOW
                 </button>
               </Link>

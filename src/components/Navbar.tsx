@@ -13,7 +13,7 @@ const Navbar = () => {
       {/* MOBILE */}
       <div className="h-full flex items-center justify-between md:hidden">
         <Link href="/">
-          <div className="text-l tracking-wide font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-800 to-black animate-fire-glow">COMMERCE <br /> CENTER</div>
+          <div className="text-l tracking-wide font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">UNI <br /> MALL</div>
         </Link>
         <Menu />
       </div>
@@ -23,8 +23,8 @@ const Navbar = () => {
         <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="" width={24} height={24} />
-            <div className="text-2xl tracking-wide font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-800 to-black animate-fire-glow">
-  COMMERCE CENTER
+            <div className="text-4xl tracking-widest font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
+  UNI MALL
 </div>
           </Link>
           <div className="hidden xl:flex gap-4">
