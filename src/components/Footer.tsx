@@ -135,7 +135,7 @@ const Footer = () => {
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
         <div className="">
-          © 2024 felixbest.dev <br /> All rights reserved
+          © 2025 felixbest.dev <br /> All rights reserved
         </div>
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="">

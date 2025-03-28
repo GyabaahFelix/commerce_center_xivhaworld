@@ -41,21 +41,21 @@ const ProfilePage = async () => {
             <input
               type="text"
               name="username"
-              placeholder={user.member?.profile?.nickname || "john"}
+              placeholder={user.member?.profile?.nickname || "Felix"}
               className="ring-1 ring-gray-300 rounded-md p-2 max-w-96"
             />
             <label className="text-sm text-gray-700">First Name</label>
             <input
               type="text"
               name="firstName"
-              placeholder={user.member?.contact?.firstName || "John"}
+              placeholder={user.member?.contact?.firstName || "Felix"}
               className="ring-1 ring-gray-300 rounded-md p-2 max-w-96"
             />
             <label className="text-sm text-gray-700">Surname</label>
             <input
               type="text"
               name="lastName"
-              placeholder={user.member?.contact?.lastName || "Doe"}
+              placeholder={user.member?.contact?.lastName || "Best"}
               className="ring-1 ring-gray-300 rounded-md p-2 max-w-96"
             />
             <label className="text-sm text-gray-700">Phone</label>
@@ -73,7 +73,7 @@ const ProfilePage = async () => {
             <input
               type="email"
               name="email"
-              placeholder={user.member?.loginEmail || "john@gmail.com"}
+              placeholder={user.member?.loginEmail || "felix@gmail.com"}
               className="ring-1 ring-gray-300 rounded-md p-2 max-w-96"
             />
             <UpdateButton />

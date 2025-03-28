@@ -19,7 +19,7 @@ const ProductList = async ({
   // Ensure categoryId is provided
   if (!categoryId) {
     console.error("Error: categoryId is missing.");
-    return <p className="text-red-500">Error: No category selected.</p>;
+    return <p className="text-red-500"> No New categories selected.</p>;
   }
 
   const wixClient = await wixClientServer();

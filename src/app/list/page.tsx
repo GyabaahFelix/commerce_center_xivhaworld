@@ -3,6 +3,7 @@ import ProductList from "@/components/ProductList";
 import Skeleton from "@/components/Skeleton";
 import { wixClientServer } from "@/lib/wixClientServer";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 
 const ListPage = async ({ searchParams }: { searchParams: any }) => {
@@ -21,9 +22,11 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
             Grab up to 50% off on
             <br /> Selected Products
           </h1>
+          <Link href="/list">
           <button className="rounded-3xl bg-lama text-white w-max py-3 px-5 text-sm">
             Buy Now
           </button>
+          </Link>
         </div>
         <div className="relative w-1/3">
           <Image src="/woman.png" alt="" fill className="object-contain" />

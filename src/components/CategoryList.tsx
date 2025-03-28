@@ -18,11 +18,13 @@ const CategoryList = async () => {
           >
             <div className="relative bg-slate-100 w-full h-96">
               <Image
-                src={item.media?.mainMedia?.image?.url || "/cat.png"}
-                alt=""
+                src={item.media?.mainMedia?.image?.url || "/cart.png"}
+                alt={item.name || "Category Image"}
                 fill
                 sizes="20vw"
                 className="object-cover"
+                priority
+                unoptimized // Disables Next.js image compression
               />
             </div>
             <h1 className="mt-8 font-light text-xl tracking-wide">

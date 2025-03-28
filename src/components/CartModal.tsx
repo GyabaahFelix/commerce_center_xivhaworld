@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // ✅ Import useRouter
 import { useCartStore } from "@/hooks/useCartStore";
 import { media as wixMedia } from "@wix/sdk";
 import { useWixClient } from "@/hooks/useWixClient";
@@ -9,6 +10,7 @@ import { currentCart } from "@wix/ecom";
 const CartModal = () => {
   const wixClient = useWixClient();
   const { cart, isLoading, removeItem } = useCartStore();
+  const router = useRouter(); // ✅ Initialize router here
 
   const handleCheckout = async () => {
     try {
@@ -109,7 +111,11 @@ const CartModal = () => {
               Shipping and taxes calculated at checkout.
             </p>
             <div className="flex justify-between text-sm">
-              <button className="rounded-md py-3 px-4 ring-1 ring-gray-300">
+              {/* ✅ FIXED: Use router.push to navigate to the cart page */}
+              <button
+                className="rounded-md py-3 px-4 ring-1 ring-gray-300"
+                onClick={() => router.push("/cart")} // ✅ Correct usage
+              >
                 View Cart
               </button>
               <button
