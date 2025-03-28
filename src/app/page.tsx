@@ -90,7 +90,7 @@ const HomePage = async () => {
       <div className="mt-24">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center uppercase tracking-wider px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 mb-12 relative">
           Categories
-          <span className="block w-24 md:w-32 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mt-2"></span>
+          <span className="block w-24 md:w-32 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-2"></span>
         </h1>
 
         <Suspense fallback={<Skeleton />}>
