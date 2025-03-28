@@ -201,7 +201,7 @@ const LoginPage = () => {
             className="text-sm underline cursor-pointer"
             onClick={() => setMode(MODE.REGISTER)}
           >
-            {"Don't"} have an account?
+            {"Don't"} have an account? SignUp here
           </div>
         )}
         {mode === MODE.REGISTER && (
@@ -209,7 +209,7 @@ const LoginPage = () => {
             className="text-sm underline cursor-pointer"
             onClick={() => setMode(MODE.LOGIN)}
           >
-            Have and account?
+            Have and account? Login here
           </div>
         )}
         {mode === MODE.RESET_PASSWORD && (

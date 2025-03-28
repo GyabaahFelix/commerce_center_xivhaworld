@@ -15,6 +15,7 @@
     "@wix/redirects": "^1.0.44",
     "@wix/sdk": "^1.15.15",
     "@wix/stores": "^1.0.400",
+    "framer-motion": "^12.6.2",
     "isomorphic-dompurify": "^2.9.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.484.0",

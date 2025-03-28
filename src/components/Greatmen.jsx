@@ -9,7 +9,7 @@ const slides = [
     title: "Honoring the Visionaries 🏆",
     description:
       "Behind every great project, there are great minds. This is our tribute to the innovative thinkers who made this possible.",
-    img: "/official.jpg",
+    img: "/bg1.jpg",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {

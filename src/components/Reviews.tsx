@@ -63,7 +63,7 @@ const Reviews = async ({ productId }: { productId: string }) => {
     ));
   } catch (error) {
     console.error("Error fetching reviews:", error);
-    return <p>Error loading reviews.</p>;
+    return <p>No reviews yet.</p>;
   }
 };
 
