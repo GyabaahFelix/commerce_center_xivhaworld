@@ -1,12 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa"; // FontAwesome close icon
 import Image from "next/image";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
+
+  // Prevent scrolling when the menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup on unmount
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [open]);
 
   return (
     <div className="relative">
@@ -35,12 +47,13 @@ const Menu = () => {
         />
 
         <Link href="/" onClick={() => setOpen(false)}>Homepage</Link>
-        <Link href="/list" onClick={() => setOpen(false)}>Shop</Link>
+        <Link href="/productlist" onClick={() => setOpen(false)}>Shop</Link>
         {/* <Link href="/deals" onClick={() => setOpen(false)}>Deals</Link> */}
         <Link href="/about" onClick={() => setOpen(false)}>About</Link>
         <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
-        <Link href="/logout" onClick={() => setOpen(false)}>Logout</Link>
         <Link href="/cart" onClick={() => setOpen(false)}>Cart</Link>
+        <Link href="/profile" onClick={() => setOpen(false)}>Profile</Link>
+        <Link href="/logout" onClick={() => setOpen(false)}>Logout</Link>
       </div>
     </div>
   );

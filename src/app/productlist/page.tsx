@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const CategoryList = () => {
+const Shop = () => {
   const [categories, setCategories] = useState([]);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -46,10 +46,18 @@ const CategoryList = () => {
 
   return (
     <div className="relative w-full px-4">
-      {/* Scrollable Category List with Two Columns on Small Screens */}
+      {/* Scroll Left Button */}
+      <button
+        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
+        onClick={() => scrollByAmount(-300)}
+      >
+        <ChevronLeft size={24} />
+      </button>
+
+      {/* Scrollable Category List */}
       <motion.div
         ref={carouselRef}
-        className="grid grid-cols-2 gap-4 sm:flex sm:gap-4 md:gap-8 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform"
+        className="grid grid-cols-2 md:flex gap-4 md:gap-8 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform"
         drag="x"
         dragConstraints={{ right: 0, left: -categories.length * 220 }} // Dynamic constraints
         dragElastic={0.2} // Adds a smooth effect
@@ -62,7 +70,7 @@ const CategoryList = () => {
             whileHover={{ scale: 1.05 }}
           >
             <Link href={`/list?cat=${item.slug}`} className="block">
-              <div className="relative bg-slate-100 w-full h-40 sm:h-64 rounded-lg overflow-hidden shadow-lg">
+              <div className="relative bg-slate-100 w-full h-64 rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={item.media?.mainMedia?.image?.url || "/cart.png"}
                   alt={item.name || "Category Image"}
@@ -73,7 +81,7 @@ const CategoryList = () => {
                   unoptimized
                 />
               </div>
-              <h1 className="mt-2 sm:mt-4 font-light text-sm sm:text-lg tracking-wide text-center">
+              <h1 className="mt-4 font-light text-lg tracking-wide text-center">
                 {item.name}
               </h1>
             </Link>
@@ -81,29 +89,7 @@ const CategoryList = () => {
         ))}
       </motion.div>
 
-      {/* Scroll Buttons - Hidden on Large Screens, Below on Small Screens */}
-      <div className="flex justify-center gap-6 mt-4 md:hidden">
-        <button
-          className="bg-gray-200 p-3 rounded-full shadow-md"
-          onClick={() => scrollByAmount(-300)}
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          className="bg-gray-200 p-3 rounded-full shadow-md"
-          onClick={() => scrollByAmount(300)}
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-
-      {/* Scroll Buttons on Large Screens */}
-      <button
-        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
-        onClick={() => scrollByAmount(-300)}
-      >
-        <ChevronLeft size={24} />
-      </button>
+      {/* Scroll Right Button */}
       <button
         className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
         onClick={() => scrollByAmount(300)}
@@ -114,4 +100,4 @@ const CategoryList = () => {
   );
 };
 
-export default CategoryList;
+export default Shop;
