@@ -38,7 +38,7 @@ const slides = [
   },
 ];
 
-const Greatmen = () => {
+const About = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -105,4 +105,4 @@ const Greatmen = () => {
   );
 };
 
-export default Greatmen;
+export default About;

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "@wix/bookings": "^1.0.634",
     "@wix/ecom": "^1.0.1012",
     "@wix/members": "^1.0.77",
@@ -23,6 +24,7 @@
     "react": "^18",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
+    "react-icons": "^5.5.0",
     "timeago.js": "^4.0.2",
     "zustand": "^4.5.2"
   },
