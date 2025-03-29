@@ -19,7 +19,7 @@ export const updateUser = async (formData: FormData) => {
       contact: {
         firstName: firstName || undefined,
         lastName: lastName || undefined,
-        phones: [phone] || undefined,
+        phones: phone ? [phone] : undefined,
       },
       loginEmail: email || undefined,
       profile: { nickname: username || undefined },
