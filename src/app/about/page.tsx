@@ -82,7 +82,9 @@ const About = () => {
                 <h2 className="text-lg lg:text-xl 2xl:text-2xl max-w-2xl">
                   {slide.description}
                 </h2>
-                <p className="text-sm">- With appreciation from the UNIMALL team</p>
+                <p className="text-sm">
+                  - With appreciation from the UNIMALL team
+                </p>
               </div>
             </div>
           ))}
@@ -155,33 +157,84 @@ const About = () => {
         </p>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-          <div className="bg-white shadow-lg rounded-xl p-6 w-64">
+          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
+            {/* Background Image */}
             <Image
-              src="/team1.jpg"
+              src="/felix.jpg"
               alt="Team Member"
-              width={120}
-              height={120}
-              className="mx-auto rounded-full"
+              layout="fill" // Ensures image covers entire div
+              objectFit="cover" // Makes the image fill the box
+              className="absolute inset-0"
             />
-            <h4 className="mt-4 text-lg font-semibold text-gray-800">
-              Felix Gyabaah
-            </h4>
-            <p className="text-gray-600">Lead Developer</p>
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Text Content in Front */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
+              <h4 className="text-lg font-semibold">Felix Gyabaah</h4>
+              <p className="text-sm">Lead Developer</p>
+            </div>
+          </div>
+          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
+            {/* Background Image */}
+            <Image
+              src="/dennis.jpg"
+              alt="Team Member"
+              layout="fill" // Ensures image covers entire div
+              objectFit="cover" // Makes the image fill the box
+              className="absolute inset-0"
+            />
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Text Content in Front */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
+              <h4 className="text-lg font-semibold">Dennis Anim</h4>
+              <p className="text-sm">Lead Developer</p>
+            </div>
+          </div>
+          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
+            {/* Background Image */}
+            <Image
+              src="/daniel.jpg"
+              alt="Team Member"
+              layout="fill" // Ensures image covers entire div
+              objectFit="cover" // Makes the image fill the box
+              className="absolute inset-0"
+            />
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Text Content in Front */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
+              <h4 className="text-lg font-semibold">Daniel Nti Awuku</h4>
+              <p className="text-sm">Lead Developer</p>
+            </div>
+          </div>
+          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
+            {/* Background Image */}
+            <Image
+              src="/eunice.jpg"
+              alt="Team Member"
+              layout="fill" // Ensures image covers entire div
+              objectFit="cover" // Makes the image fill the box
+              className="absolute inset-0"
+            />
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Text Content in Front */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
+              <h4 className="text-lg font-semibold">Eunice Yaa Akligo</h4>
+              <p className="text-sm">Lead Developer</p>
+            </div>
           </div>
 
-          <div className="bg-white shadow-lg rounded-xl p-6 w-64">
-            <Image
-              src="/team2.jpg"
-              alt="Team Member"
-              width={120}
-              height={120}
-              className="mx-auto rounded-full"
-            />
-            <h4 className="mt-4 text-lg font-semibold text-gray-800">
-              Eunice Yaa Akligo
-            </h4>
-            <p className="text-gray-600">UI/UX Designer</p>
-          </div>
+         
         </div>
       </section>
     </div>
