@@ -46,16 +46,21 @@ const CategoryList = () => {
 
   return (
     <div className="relative w-full px-4">
-      {/* Scrollable Category List with Two Columns on Small Screens */}
+      {/* Category List - Scrollbar hidden on all screens */}
       <motion.div
         ref={carouselRef}
-        className="grid grid-cols-2 gap-4 sm:flex sm:gap-4 md:gap-8 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform"
+        className="grid grid-cols-2 gap-4 sm:flex sm:overflow-hidden sm:scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform"
         drag="x"
-        dragConstraints={{ right: 0, left: -categories.length * 220 }} // Dynamic constraints
-        dragElastic={0.2} // Adds a smooth effect
+        dragConstraints={{ right: 0, left: -categories.length * 220 }}
+        dragElastic={0.2}
         whileTap={{ cursor: "grabbing" }}
+        style={{
+          scrollbarWidth: "none", // Firefox
+          msOverflowStyle: "none", // IE/Edge
+          overflow: "hidden", // Hide scrollbars on all screens
+        }}
       >
-        {categories.map((item) => (
+        {categories.slice(0, 4).map((item) => (
           <motion.div
             key={item._id}
             className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px]"
@@ -81,8 +86,8 @@ const CategoryList = () => {
         ))}
       </motion.div>
 
-      {/* Scroll Buttons - Hidden on Large Screens, Below on Small Screens */}
-      <div className="flex justify-center gap-6 mt-4 md:hidden">
+      {/* Scroll Buttons - Only show on small screens */}
+      <div className="flex justify-center gap-6 mt-4 sm:hidden">
         <button
           className="bg-gray-200 p-3 rounded-full shadow-md"
           onClick={() => scrollByAmount(-300)}
@@ -99,13 +104,13 @@ const CategoryList = () => {
 
       {/* Scroll Buttons on Large Screens */}
       <button
-        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
+        className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
         onClick={() => scrollByAmount(-300)}
       >
         <ChevronLeft size={24} />
       </button>
       <button
-        className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
+        className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
         onClick={() => scrollByAmount(300)}
       >
         <ChevronRight size={24} />
