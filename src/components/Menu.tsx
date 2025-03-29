@@ -40,7 +40,7 @@ const Menu = () => {
         <Link href="/about" onClick={() => setOpen(false)}>About</Link>
         <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
         <Link href="/logout" onClick={() => setOpen(false)}>Logout</Link>
-        <Link href="/cart" onClick={() => setOpen(false)}>Cart(1)</Link>
+        <Link href="/cart" onClick={() => setOpen(false)}>Cart</Link>
       </div>
     </div>
   );

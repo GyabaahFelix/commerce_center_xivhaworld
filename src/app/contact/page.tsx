@@ -133,7 +133,7 @@ const Contact = () => {
       {/* Google Map */}
       <div className="mt-12">
         <h2 className="text-2xl font-semibold text-center mb-4">
-          Find Us on the Map
+          Locate Us on the Map
         </h2>
         <GoogleMapComponent />
       </div>
