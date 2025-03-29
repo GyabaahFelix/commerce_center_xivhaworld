@@ -12,6 +12,14 @@ const CartModal = () => {
   const { cart, isLoading, removeItem } = useCartStore();
   const router = useRouter(); // ✅ Initialize router here
 
+  // ✅ Calculate subtotal dynamically
+  const subtotal = cart.lineItems
+    ? cart.lineItems.reduce(
+        (total, item) => total + Number(item.price?.amount || 0) * Number(item.quantity || 1),
+        0
+      )
+    : 0;
+
   const handleCheckout = async () => {
     try {
       const checkout =
@@ -104,7 +112,8 @@ const CartModal = () => {
             <div className="flex items-center justify-between font-semibold">
               <span className="">Subtotal</span>
              
-              <span className="">${cart.subtotal.amount}</span>
+              <span className="">${subtotal.toFixed(2)}</span>
+
             </div>
             <p className="text-gray-500 text-sm mt-2 mb-4">
               Shipping and taxes calculated at checkout.

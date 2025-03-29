@@ -12,6 +12,15 @@ const Cart = () => {
   const { cart, isLoading, removeItem } = useCartStore();
   const router = useRouter();
 
+  // ✅ Corrected subtotal calculation with quantity consideration
+const subtotal = cart.lineItems
+? cart.lineItems.reduce(
+    (total, item) => total + Number(item.price?.amount ?? 0) * Number(item.quantity ?? 1),
+    0
+  )
+: 0;
+
+
   const handleCheckout = async () => {
     try {
       const checkout =
@@ -91,9 +100,7 @@ const Cart = () => {
           {/* Cart Summary */}
           <div className="mt-6 flex justify-between items-center border-t pt-4">
             <span className="text-lg font-semibold">Subtotal:</span>
-            <span className="text-xl font-bold">
-              ${cart.subtotal?.amount ?? 0}
-            </span>
+            <span className="text-xl font-bold">${subtotal.toFixed(2)}</span>
           </div>
 
           {/* Cart Actions */}
