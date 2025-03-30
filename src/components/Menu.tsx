@@ -47,7 +47,7 @@ const Menu = () => {
         />
 
         <Link href="/" onClick={() => setOpen(false)}>Homepage</Link>
-        <Link href="/productlist" onClick={() => setOpen(false)}>Shop</Link>
+        <Link href="/shop" onClick={() => setOpen(false)}>Shop</Link>
         {/* <Link href="/deals" onClick={() => setOpen(false)}>Deals</Link> */}
         <Link href="/about" onClick={() => setOpen(false)}>About</Link>
         <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
