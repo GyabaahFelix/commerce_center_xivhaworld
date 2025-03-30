@@ -48,7 +48,8 @@ const Shop = () => {
       >
         <h2 className="text-4xl font-bold text-gray-800">Shop by Category</h2>
         <p className="mt-3 text-gray-600 text-lg">
-          Find the perfect items across different categories, handpicked just for you.
+          Find the perfect items across different categories, handpicked just
+          for you.
         </p>
       </motion.div>
 
@@ -63,7 +64,7 @@ const Shop = () => {
 
       <motion.div
         ref={carouselRef}
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-4 md:px-6 lg:px-8"
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 px-4 md:px-6 lg:px-8"
       >
         {categories.map((item) => (
           <motion.div
@@ -106,9 +107,12 @@ const Shop = () => {
       )}
 
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-semibold text-gray-800">Why Shop With Us?</h3>
+        <h3 className="text-2xl font-semibold text-gray-800">
+          Why Shop With Us?
+        </h3>
         <p className="mt-3 text-gray-600 text-lg">
-          We curate high-quality products to meet your needs. Enjoy exclusive deals, fast delivery, and outstanding customer support.
+          We curate high-quality products to meet your needs. Enjoy exclusive
+          deals, fast delivery, and outstanding customer support.
         </p>
       </div>
     </div>
