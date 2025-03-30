@@ -63,6 +63,12 @@ const CategoryList = () => {
     trackMouse: true,
   });
 
+  // Ensure categories always render in multiples of 4
+  const displayedCategories = [...categories.slice(currentIndex, currentIndex + ITEMS_PER_PAGE)];
+  while (displayedCategories.length < ITEMS_PER_PAGE) {
+    displayedCategories.push(null);
+  }
+
   return (
     <div {...handlers} className="relative w-full px-4 overflow-hidden">
       {/* Category Grid */}
@@ -71,24 +77,28 @@ const CategoryList = () => {
           ref={containerRef}
           className="grid grid-cols-2 grid-rows-2 gap-4 sm:flex sm:gap-6 sm:scrollbar-hide transition-transform"
         >
-          {categories.slice(currentIndex, currentIndex + ITEMS_PER_PAGE).map((item) => (
-            <div key={item._id} className="w-full">
-              <Link href={`/list?cat=${item.slug}`} className="block">
-                <div className="relative bg-slate-100 w-full h-40 sm:h-64 rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={item.media?.mainMedia?.image?.url || "/cart.png"}
-                    alt={item.name || "Category Image"}
-                    fill
-                    sizes="20vw"
-                    className="object-cover"
-                    priority
-                    unoptimized
-                  />
-                </div>
-                <h1 className="mt-2 sm:mt-4 font-light text-sm sm:text-lg tracking-wide text-center">
-                  {item.name}
-                </h1>
-              </Link>
+          {displayedCategories.map((item, index) => (
+            <div key={index} className="w-full min-h-[160px] sm:min-h-[200px]">
+              {item ? (
+                <Link href={`/list?cat=${item.slug}`} className="block">
+                  <div className="relative bg-slate-100 w-full h-40 sm:h-64 rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src={item.media?.mainMedia?.image?.url || "/cart.png"}
+                      alt={item.name || "Category Image"}
+                      fill
+                      sizes="20vw"
+                      className="object-cover"
+                      priority
+                      unoptimized
+                    />
+                  </div>
+                  <h1 className="mt-2 sm:mt-4 font-light text-sm sm:text-lg tracking-wide text-center">
+                    {item.name}
+                  </h1>
+                </Link>
+              ) : (
+                <div className="bg-gray-100 w-full h-40 sm:h-64 rounded-lg opacity-50"></div>
+              )}
             </div>
           ))}
         </div>
