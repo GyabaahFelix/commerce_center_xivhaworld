@@ -36,7 +36,8 @@ const CategoryList = () => {
       x: direction > 0 ? "-100%" : "100%",
       duration: 0.5,
       ease: "power2.inOut",
-    }).set(containerRef.current, { x: direction > 0 ? "100%" : "-100%" })
+    })
+      .set(containerRef.current, { x: direction > 0 ? "100%" : "-100%" })
       .to(containerRef.current, { x: "0%", duration: 0.5, ease: "power2.inOut" });
   };
 
@@ -56,21 +57,22 @@ const CategoryList = () => {
 
   // Swipe handlers
   const handlers = useSwipeable({
-    onSwipedLeft: () => handleNext(),
-    onSwipedRight: () => handlePrev(),
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
 
   return (
     <div {...handlers} className="relative w-full px-4 overflow-hidden">
+      {/* Category Grid */}
       <div className="overflow-hidden relative">
-        <div ref={containerRef} className="flex gap-4 transition-transform">
+        <div
+          ref={containerRef}
+          className="grid grid-cols-2 grid-rows-2 gap-4 sm:flex sm:gap-6 sm:scrollbar-hide transition-transform"
+        >
           {categories.slice(currentIndex, currentIndex + ITEMS_PER_PAGE).map((item) => (
-            <div
-              key={item._id}
-              className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px]"
-            >
+            <div key={item._id} className="w-full">
               <Link href={`/list?cat=${item.slug}`} className="block">
                 <div className="relative bg-slate-100 w-full h-40 sm:h-64 rounded-lg overflow-hidden shadow-lg">
                   <Image
@@ -92,7 +94,7 @@ const CategoryList = () => {
         </div>
       </div>
 
-      {/* Scroll Buttons - Small & Medium Screens */}
+      {/* Scroll Buttons */}
       <div className="flex justify-center gap-6 mt-4 sm:flex">
         {canGoPrev && (
           <button className="bg-gray-200 p-3 rounded-full shadow-md" onClick={handlePrev}>
@@ -105,24 +107,6 @@ const CategoryList = () => {
           </button>
         )}
       </div>
-
-      {/* Scroll Buttons - Large Screens */}
-      {canGoPrev && (
-        <button
-          className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
-          onClick={handlePrev}
-        >
-          <ChevronLeft size={24} />
-        </button>
-      )}
-      {canGoNext && (
-        <button
-          className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10"
-          onClick={handleNext}
-        >
-          <ChevronRight size={24} />
-        </button>
-      )}
     </div>
   );
 };
