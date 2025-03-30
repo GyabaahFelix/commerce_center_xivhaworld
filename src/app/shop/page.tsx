@@ -57,7 +57,7 @@ const Shop = () => {
           className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md z-10 hidden md:flex hover:scale-110 transition-transform"
           onClick={() => scrollByAmount(-700)}
         >
-          <ChevronLeft size={28} className="text-gray-700" />
+          {/* <ChevronLeft size={28} className="text-gray-700" /> */}
         </button>
       )}
 
@@ -101,7 +101,7 @@ const Shop = () => {
           className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-md z-10 hidden md:flex hover:scale-110 transition-transform"
           onClick={() => scrollByAmount(700)}
         >
-          <ChevronRight size={28} className="text-gray-700" />
+          {/* <ChevronRight size={28} className="text-gray-700" /> */}
         </button>
       )}
 
