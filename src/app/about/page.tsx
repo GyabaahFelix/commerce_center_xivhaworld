@@ -172,7 +172,7 @@ const About = () => {
 
             {/* Text Content in Front */}
             <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
-              <h4 className="text-lg font-semibold">Felix Gyabaah</h4>
+              <h4 className="text-lg font-semibold">Felix Best</h4>
               <p className="text-sm">Lead Developer</p>
             </div>
           </div>

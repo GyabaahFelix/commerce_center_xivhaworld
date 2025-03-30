@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -9,68 +10,53 @@ const Footer = () => {
         {/* LEFT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <Link href="/">
-          <div className="text-5xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
-  FELIX BEST
-</div>
-
+            <div className="text-5xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
+              FELIX BEST
+            </div>
           </Link>
           <p>
             P.O Box LG 25, <br />
-            University of Ghana,Legon. <br />
-            Accra,Ghana.
+            University of Ghana, Legon. <br />
+            Accra, Ghana.
           </p>
           <span className="font-semibold">felixic360@gmail.com</span>
           <span className="font-semibold">+233 24 540 2719</span>
-          <div className="flex gap-6">
+          <div className="mt-4 font-semibold">Follow us on</div>
+          <div className="flex gap-6 mt-2">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/FelixBest360"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/facebook.png"
-                alt="Facebook"
-                width={16}
-                height={16}
-              />
+              <FaFacebook className="text-blue-600 text-2xl hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/FelixBest360"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/instagram.png"
-                alt="Instagram"
-                width={16}
-                height={16}
-              />
+              <FaInstagram className="text-pink-600 text-2xl hover:scale-110 transition-transform" />
             </a>
             <a
               href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/youtube.png" alt="YouTube" width={16} height={16} />
+              <FaYoutube className="text-red-600 text-2xl hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://www.pinterest.com"
+              href="https://www.linkedin.com/in/felix-best"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/pinterest.png"
-                alt="Pinterest"
-                width={16}
-                height={16}
-              />
+              <FaLinkedin className="text-blue-700 text-2xl hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/FelixBest360"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/x.png" alt="Twitter (X)" width={16} height={16} />
+              <FaTwitter className="text-blue-500 text-2xl hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>
@@ -111,15 +97,10 @@ const Footer = () => {
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <h1 className="font-medium text-lg">SUBSCRIBE</h1>
           <p>
-            Be the first to get the latest news about trends, promotions, and
-            much more!
+            Be the first to get the latest news about trends, promotions, and much more!
           </p>
           <div className="flex">
-            <input
-              type="text"
-              placeholder="Email address"
-              className="p-4 w-3/4"
-            />
+            <input type="text" placeholder="Email address" className="p-4 w-3/4" />
             <button className="w-1/4 bg-lama text-white">JOIN</button>
           </div>
           <span className="font-semibold">Secure Payments</span>
@@ -134,15 +115,15 @@ const Footer = () => {
       </div>
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
-        <div className="">
+        <div>
           © 2025 felixbest.dev <br /> All rights reserved
         </div>
         <div className="flex flex-col gap-8 md:flex-row">
-          <div className="">
+          <div>
             <span className="text-gray-500 mr-4">Language</span>
             <span className="font-medium">Ghana | English</span>
           </div>
-          <div className="">
+          <div>
             <span className="text-gray-500 mr-4">Currency</span>
             <span className="font-medium">₵ GHS</span>
           </div>

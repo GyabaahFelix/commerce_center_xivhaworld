@@ -75,13 +75,13 @@ const Contact = () => {
           </div>
 
           <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com" target="_blank">
+            <a href="https://www.facebook.com/felixbest360" target="_blank">
               <FaFacebook className="text-blue-700 text-3xl hover:scale-110 transition" />
             </a>
-            <a href="https://x.com" target="_blank">
+            <a href="https://x.com/felixbest360" target="_blank">
               <FaXTwitter className="text-black text-3xl hover:scale-110 transition" />
             </a>
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com/felixbest360" target="_blank">
               <FaInstagram className="text-pink-600 text-3xl hover:scale-110 transition" />
             </a>
             <a href="https://wa.me/233245402719" target="_blank">

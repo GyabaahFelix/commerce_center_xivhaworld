@@ -49,15 +49,10 @@ const CategoryList = () => {
       {/* Category List - Scrollbar hidden on all screens */}
       <motion.div
         ref={carouselRef}
-        className="grid grid-cols-2 gap-4 sm:flex sm:overflow-hidden sm:scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform"
-        drag="x"
-        dragConstraints={{ right: 0, left: -categories.length * 220 }}
-        dragElastic={0.2}
-        whileTap={{ cursor: "grabbing" }}
+        className="grid grid-cols-2 gap-4 sm:flex sm:overflow-hidden sm:scrollbar-hide cursor-grab active:cursor-grabbing will-change-transform overflow-x-hidden"
         style={{
           scrollbarWidth: "none", // Firefox
           msOverflowStyle: "none", // IE/Edge
-          overflow: "hidden", // Hide scrollbars on all screens
         }}
       >
         {categories.slice(0, 4).map((item) => (
