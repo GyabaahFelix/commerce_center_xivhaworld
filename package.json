@@ -18,6 +18,7 @@
     "@wix/stores": "^1.0.400",
     "framer": "^2.4.1",
     "framer-motion": "^12.6.2",
+    "gsap": "^3.12.7",
     "isomorphic-dompurify": "^2.9.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.484.0",
