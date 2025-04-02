@@ -9,7 +9,7 @@ const slides = [
     title: "Honoring the Visionaries 🏆",
     description:
       "Behind every great project, there are great minds. This is our tribute to the innovative thinkers who made this possible.",
-    img: "/bg1.jpg",
+    img: "/bright.jpg",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
@@ -17,7 +17,7 @@ const slides = [
     title: "Driven by Passion 🚀",
     description:
       "A project built with dedication, teamwork, and an unyielding passion for excellence.",
-    img: "/bg2.jpg",
+    img: "/felix.jpg",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
   },
   {
@@ -25,15 +25,7 @@ const slides = [
     title: "Mega Minds Behind the Scenes 💡",
     description:
       "From concept to reality, we extend our deepest gratitude to the masterminds who made this dream a reality.",
-    img: "/bg3.jpg",
-    bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
-  },
-  {
-    id: 4,
-    title: "Mega Minds Behind the Scenes 💡",
-    description:
-      "From concept to reality, we extend our deepest gratitude to the masterminds who made this dream a reality.",
-    img: "/bg4.jpg",
+    img: "/dennis.jpg",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
 ];
@@ -160,6 +152,25 @@ const About = () => {
           <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
             {/* Background Image */}
             <Image
+              src="/bright.jpg"
+              alt="CEO"
+              layout="fill" // Ensures image covers entire div
+              objectFit="cover" // Makes the image fill the box
+              className="absolute inset-0"
+            />
+
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Text Content in Front */}
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
+              <h4 className="text-lg font-semibold">Bright Amoako Mensah</h4>
+              <p className="text-sm">CEO</p>
+            </div>
+          </div>
+          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
+            {/* Background Image */}
+            <Image
               src="/felix.jpg"
               alt="Team Member"
               layout="fill" // Ensures image covers entire div
@@ -173,7 +184,7 @@ const About = () => {
             {/* Text Content in Front */}
             <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
               <h4 className="text-lg font-semibold">Felix Best</h4>
-              <p className="text-sm">Lead Developer</p>
+              <p className="text-sm">Developer</p>
             </div>
           </div>
           <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
@@ -192,45 +203,7 @@ const About = () => {
             {/* Text Content in Front */}
             <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
               <h4 className="text-lg font-semibold">Dennis Anim</h4>
-              <p className="text-sm">Lead Developer</p>
-            </div>
-          </div>
-          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
-            {/* Background Image */}
-            <Image
-              src="/daniel.jpg"
-              alt="Team Member"
-              layout="fill" // Ensures image covers entire div
-              objectFit="cover" // Makes the image fill the box
-              className="absolute inset-0"
-            />
-
-            {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
-
-            {/* Text Content in Front */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
-              <h4 className="text-lg font-semibold">Daniel Nti Awuku</h4>
-              <p className="text-sm">Lead Developer</p>
-            </div>
-          </div>
-          <div className="relative bg-white shadow-lg rounded-xl overflow-hidden w-64 h-80">
-            {/* Background Image */}
-            <Image
-              src="/eunice.jpg"
-              alt="Team Member"
-              layout="fill" // Ensures image covers entire div
-              objectFit="cover" // Makes the image fill the box
-              className="absolute inset-0"
-            />
-
-            {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
-
-            {/* Text Content in Front */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 text-white text-center">
-              <h4 className="text-lg font-semibold">Eunice Yaa Akligo</h4>
-              <p className="text-sm">Lead Developer</p>
+              <p className="text-sm">Developer</p>
             </div>
           </div>
 

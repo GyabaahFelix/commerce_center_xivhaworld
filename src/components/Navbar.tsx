@@ -15,10 +15,8 @@ const Navbar = () => {
       {/* LEFT - UNI MALL LOGO */}
       <div className="flex items-center">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Uni Mall Logo" width={30} height={30} />
-          <div className="text-2xl sm:text-3xl md:text-4xl tracking-widest font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
-            UNI MALL
-          </div>
+          <Image src="/xivhalogo.png" alt="Uni Mall Logo" width={200} height={200} />
+
         </Link>
       </div>
 

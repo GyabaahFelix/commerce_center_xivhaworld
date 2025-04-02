@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Welcome to UNIMALL👋🏾",
+    title: "Welcome to XIVHA Mall🛒",
     description: "Your One-Stop Shopping Destination!",
     img: "/slider1.jpg",
     url: "/",

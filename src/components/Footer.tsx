@@ -10,9 +10,7 @@ const Footer = () => {
         {/* LEFT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
           <Link href="/">
-            <div className="text-5xl md:text-6xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-purple-500 to-blue-600 drop-shadow-lg">
-              FELIX BEST
-            </div>
+            <Image src="/xivhalogo.png" alt="Uni Mall Logo" width={200} height={200} />
           </Link>
           <p>
             P.O Box LG 25, <br />

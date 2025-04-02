@@ -100,9 +100,9 @@ const HomePage = async () => {
           />
         </Suspense>
       </div> */}
-      <div>
+      {/* <div>
         <About />
-      </div>
+      </div> */}
     </div>
   );
 };
