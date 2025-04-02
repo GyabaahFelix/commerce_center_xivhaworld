@@ -17,7 +17,7 @@ const Footer = () => {
             University of Ghana, Legon. <br />
             Accra, Ghana.
           </p>
-          <span className="font-semibold">felixic360@gmail.com</span>
+          <span className="font-semibold">xivhaworld@gmail.com</span>
           <span className="font-semibold">+233 24 540 2719</span>
           <div className="mt-4 font-semibold">Follow us on</div>
           <div className="flex gap-6 mt-2">
@@ -114,7 +114,7 @@ const Footer = () => {
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
         <div>
-          © 2025 felixbest.dev <br /> All rights reserved
+          © 2025 xivhaworld.inc <br /> All rights reserved
         </div>
         <div className="flex flex-col gap-8 md:flex-row">
           <div>
